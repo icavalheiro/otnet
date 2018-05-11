@@ -1,12 +1,12 @@
 namespace OTNet.Enums
 {
-    enum RuleViolationType {
+    public enum RuleViolationType {
         REPORT_TYPE_NAME = 0,
         REPORT_TYPE_STATEMENT = 1,
         REPORT_TYPE_BOT = 2
     };
 
-    enum RuleViolationReasons {
+    public enum RuleViolationReasons {
         REPORT_REASON_NAMEINAPPROPRIATE = 0,
         REPORT_REASON_NAMEPOORFORMATTED = 1,
         REPORT_REASON_NAMEADVERTISING = 2,
@@ -30,20 +30,20 @@ namespace OTNet.Enums
         REPORT_REASON_SERVICEAGREEMENT = 20
     };
 
-    enum BugReportType{
+    public enum BugReportType{
         BUG_CATEGORY_MAP = 0,
         BUG_CATEGORY_TYPO = 1,
         BUG_CATEGORY_TECHNICAL = 2,
         BUG_CATEGORY_OTHER = 3
     };
 
-    enum ThreadState {
+    public enum ThreadState {
         THREAD_STATE_RUNNING,
         THREAD_STATE_CLOSING,
         THREAD_STATE_TERMINATED,
     };
 
-    enum ItemAttrTypes {
+    public enum ItemAttrTypes {
         ITEM_ATTRIBUTE_NONE,
 
         ITEM_ATTRIBUTE_ACTIONID = 1 << 0,
@@ -73,23 +73,23 @@ namespace OTNet.Enums
         ITEM_ATTRIBUTE_IMBUINGSLOTS = 1 << 24,
     };
 
-    enum VipStatus{
+    public enum VipStatus{
         VIPSTATUS_OFFLINE = 0,
         VIPSTATUS_ONLINE = 1,
         VIPSTATUS_PENDING = 2
     };
 
-    enum MarketAction {
+    public enum MarketAction {
         MARKETACTION_BUY = 0,
         MARKETACTION_SELL = 1,
     };
 
-    enum MarketRequest {
+    public enum MarketRequest {
         MARKETREQUEST_OWN_OFFERS = 0xFFFE,
         MARKETREQUEST_OWN_HISTORY = 0xFFFF,
     };
 
-    enum MarketOfferState {
+    public enum MarketOfferState {
         OFFERSTATE_ACTIVE = 0,
         OFFERSTATE_CANCELLED = 1,
         OFFERSTATE_EXPIRED = 2,
@@ -98,21 +98,21 @@ namespace OTNet.Enums
         OFFERSTATE_ACCEPTEDEX = 255,
     };
 
-    enum ChannelEvent{
+    public enum ChannelEvent{
         CHANNELEVENT_JOIN = 0,
         CHANNELEVENT_LEAVE = 1,
         CHANNELEVENT_INVITE = 2,
         CHANNELEVENT_EXCLUDE = 3,
     };
 
-    enum CreatureType{
+    public enum CreatureType{
         CREATURETYPE_PLAYER = 0,
         CREATURETYPE_MONSTER = 1,
         CREATURETYPE_NPC = 2,
         CREATURETYPE_SUMMONPLAYER = 3,
     };
 
-    enum OperatingSystem{
+    public enum OperatingSystem{
         CLIENTOS_NONE = 0,
 
         CLIENTOS_LINUX = 1,
@@ -125,7 +125,7 @@ namespace OTNet.Enums
         CLIENTOS_OTCLIENT_MAC = 12,
     };
 
-    enum SpellGroup{
+    public enum SpellGroup{
         SPELLGROUP_NONE = 0,
         SPELLGROUP_ATTACK = 1,
         SPELLGROUP_HEALING = 2,
@@ -134,7 +134,7 @@ namespace OTNet.Enums
         SPELLGROUP_CONJURE = 5,
     };
 
-    enum AccountType{
+    public enum AccountType{
         ACCOUNT_TYPE_NORMAL = 1,
         ACCOUNT_TYPE_TUTOR = 2,
         ACCOUNT_TYPE_SENIORTUTOR = 3,
@@ -142,7 +142,7 @@ namespace OTNet.Enums
         ACCOUNT_TYPE_GOD = 5
     };
 
-    enum RaceType{
+    public enum RaceType{
         RACE_NONE,
         RACE_VENOM,
         RACE_BLOOD,
@@ -151,7 +151,7 @@ namespace OTNet.Enums
         RACE_ENERGY,
     };
 
-    enum CombatType {
+    public enum CombatType {
         COMBAT_NONE = 0,
 
         COMBAT_PHYSICALDAMAGE = 1 << 0,
@@ -170,7 +170,7 @@ namespace OTNet.Enums
         COMBAT_COUNT = 12
     };
 
-    enum CombatParam {
+    public enum CombatParam {
         COMBAT_PARAM_TYPE,
         COMBAT_PARAM_EFFECT,
         COMBAT_PARAM_DISTANCEEFFECT,
@@ -183,14 +183,14 @@ namespace OTNet.Enums
         COMBAT_PARAM_USECHARGES,
     };
 
-    enum CallBackParam {
+    public enum CallBackParam {
         CALLBACK_PARAM_LEVELMAGICVALUE,
         CALLBACK_PARAM_SKILLVALUE,
         CALLBACK_PARAM_TARGETTILE,
         CALLBACK_PARAM_TARGETCREATURE,
     };
 
-    enum ConditionParam {
+    public enum ConditionParam {
         CONDITION_PARAM_OWNER = 1,
         CONDITION_PARAM_TICKS = 2,
         //CONDITION_PARAM_OUTFIT = 3,
@@ -251,14 +251,14 @@ namespace OTNet.Enums
         CONDITION_PARAM_SKILL_MANA_LEECH_AMOUNTPERCENT = 58,
     };
 
-    enum BlockType{
+    public enum BlockType{
         BLOCK_NONE,
         BLOCK_DEFENSE,
         BLOCK_ARMOR,
         BLOCK_IMMUNITY
     };
 
-    enum Skills{
+    public enum Skills{
         SKILL_FIST = 0,
         SKILL_CLUB = 1,
         SKILL_SWORD = 2,
@@ -280,7 +280,7 @@ namespace OTNet.Enums
         SKILL_LAST = SKILL_MANA_LEECH_AMOUNT
     };
 
-    enum Stats {
+    public enum Stats {
         STAT_MAXHITPOINTS,
         STAT_MAXMANAPOINTS,
         STAT_SOULPOINTS, // unused
@@ -290,14 +290,14 @@ namespace OTNet.Enums
         STAT_LAST = STAT_MAGICPOINTS
     };
 
-    enum FormulaType {
+    public enum FormulaType {
         COMBAT_FORMULA_UNDEFINED,
         COMBAT_FORMULA_LEVELMAGIC,
         COMBAT_FORMULA_SKILL,
         COMBAT_FORMULA_DAMAGE,
     };
 
-    enum ConditionType {
+    public enum ConditionType {
         CONDITION_NONE,
 
         CONDITION_POISON = 1 << 0,
@@ -330,7 +330,7 @@ namespace OTNet.Enums
         CONDITION_SPELLGROUPCOOLDOWN = 1 << 27,
     };
 
-    enum ConditionId {
+    public enum ConditionId {
         CONDITIONID_DEFAULT = -1,
         CONDITIONID_COMBAT,
         CONDITIONID_HEAD,
@@ -345,18 +345,18 @@ namespace OTNet.Enums
         CONDITIONID_AMMO,
     };
 
-    enum PlayerSex{
+    public enum PlayerSex{
         PLAYERSEX_FEMALE = 0,
         PLAYERSEX_MALE = 1,
 
         PLAYERSEX_LAST = PLAYERSEX_MALE
     };
 
-    enum Vocation {
+    public enum Vocation {
         VOCATION_NONE = 0
     };
 
-    enum ReturnValue {
+    public enum ReturnValue {
         RETURNVALUE_NOERROR,
         RETURNVALUE_NOTPOSSIBLE,
         RETURNVALUE_NOTENOUGHROOM,
@@ -437,7 +437,7 @@ namespace OTNet.Enums
         RETURNVALUE_REWARDCHESTISEMPTY,
     };
 
-    enum SpeechBubble{
+    public enum SpeechBubble{
         SPEECHBUBBLE_NONE = 0,
         SPEECHBUBBLE_NORMAL = 1,
         SPEECHBUBBLE_TRADE = 2,
@@ -445,7 +445,7 @@ namespace OTNet.Enums
         SPEECHBUBBLE_QUESTTRADER = 4,
     };
 
-    enum MapMark{
+    public enum MapMark{
         MAPMARK_TICK = 0,
         MAPMARK_QUESTION = 1,
         MAPMARK_EXCLAMATION = 2,
@@ -468,7 +468,7 @@ namespace OTNet.Enums
         MAPMARK_GREENSOUTH = 19,
     };
 
-    enum CombatOrigin {
+    public enum CombatOrigin {
         ORIGIN_NONE,
         ORIGIN_CONDITION,
         ORIGIN_SPELL,
