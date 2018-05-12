@@ -20,6 +20,7 @@ namespace OTNet.DatabaseModels
         public uint Lastday { get; set; }
         public string Email { get; set; }
         public int Creation { get; set; }
+        public UInt32 Coins { get; set; }
 
         public AccountBans AccountBans { get; set; }
         public ICollection<AccountBanHistory> AccountBanHistory { get; set; }

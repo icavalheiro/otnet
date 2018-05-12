@@ -24,6 +24,7 @@ namespace OTNet.DatabaseModels
         public virtual DbSet<PlayersOnline> PlayersOnline { get; set; }
         public virtual DbSet<PlayerStorage> PlayerStorage { get; set; }
         public virtual DbSet<ServerConfig> ServerConfig { get; set; }
+        public virtual DbSet<StoreHistory> StoreHistory { get; set; }
 
         // Unable to generate entity type for table 'account_viplist'. Please see the warning messages.
         // Unable to generate entity type for table 'house_lists'. Please see the warning messages.
@@ -44,6 +45,32 @@ namespace OTNet.DatabaseModels
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<StoreHistory>(entity =>
+            {
+                entity.ToTable("store_history");
+
+                entity.Property(e => e.CoinAmount)
+                    .HasColumnName("coin_amount");
+
+                entity.HasIndex(e => e.Id)
+                    .HasName("id");
+
+                entity.Property(e => e.AccountId)
+                    .IsRequired()
+                    .HasColumnType("int(11)")
+                    .HasColumnName("account_id");
+
+                entity.Property(e => e.Description)
+                    .HasColumnName("description")
+                    .HasMaxLength(255);
+
+                entity.Property(e => e.Time)
+                    .HasColumnName("time")
+                    .HasColumnType("DATETIME");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+            });
+
             modelBuilder.Entity<AccountBanHistory>(entity =>
             {
                 entity.ToTable("account_ban_history");
@@ -144,6 +171,10 @@ namespace OTNet.DatabaseModels
                 entity.Property(e => e.Creation)
                     .HasColumnName("creation")
                     .HasColumnType("int(11)")
+                    .HasDefaultValueSql("'0'");
+
+                entity.Property(e => e.Coins)
+                    .HasColumnName("coins")
                     .HasDefaultValueSql("'0'");
 
                 entity.Property(e => e.Email)
