@@ -588,6 +588,7 @@ namespace OTNet.Const
     }
 
     public static class Constants{
+        public const Int32 NETWORKMESSAGE_MAXSIZE = 24590;
         public const Int32 CHANNEL_GUILD = 0x00;
         public const Int32 CHANNEL_PARTY = 0x01;
         public const Int32 CHANNEL_PRIVATE = 0xFFFF;
